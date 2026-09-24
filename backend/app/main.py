@@ -3,12 +3,15 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from contextlib import asynccontextmanager
 from app.config import ENV, DEBUG
+from app.db import get_supabase
 from app.routes import auth, notes
 from app.session import session_store
+from app.init_db import ensure_tables
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    ensure_tables()
     yield
     session_store.cleanup_expired()
 
