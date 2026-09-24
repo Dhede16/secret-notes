@@ -1,0 +1,127 @@
+/* Genesis Design System Tokens - SecretNotes */
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/general-sans/GeneralSans-Variable.woff2') format('woff2');
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+:root {
+  /* Colors - Genesis */
+  --color-primary: #6366F1;
+  --color-primary-hover: #4F46E5;
+  --color-secondary: #20970B;
+  --color-neutral: #9C9C9C;
+  --color-background: #FAFAFA;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #0A0A0A;
+  --color-text-secondary: #6B6B6B;
+  --color-border: #E8E8EC;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+  /* Typography */
+  --font-display: 'General Sans', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Type scale */
+  --text-display: clamp(2.5rem, 5vw, 4.5rem);
+  --text-headline: clamp(2rem, 4vw, 3.75rem);
+  --text-section: clamp(1.5rem, 3vw, 2rem);
+  --text-subhead: 1.5rem;
+  --text-body: 0.9375rem;
+  --text-small: 0.8125rem;
+  --text-caption: 0.75rem;
+  --text-overline: 0.6875rem;
+
+  /* Spacing (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-pill: 9999px;
+
+  /* Elevation */
+  --shadow-card: 0 1px 0 var(--color-border);
+  --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-button-hover: 0 4px 12px rgba(99, 102, 241, 0.35);
+  --shadow-focus: 0 0 0 3px rgba(99, 102, 241, 0.12);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+
+  /* Container */
+  --container-max: 1280px;
+  --container-padding: 24px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text-primary);
+  background: var(--color-background);
+  line-height: 1.6;
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+h1 { font-size: var(--text-display); }
+h2 { font-size: var(--text-headline); }
+h3 { font-size: var(--text-section); }
+h4 { font-size: var(--text-subhead); }
+
+code, pre, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+button {
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+}
